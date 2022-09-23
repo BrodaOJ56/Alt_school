@@ -67,7 +67,7 @@ pip install requirements.txt
 Run the app on your localhost;
 
 `python app.py
-'
+`
 
 6. When you're done for the session:
 
