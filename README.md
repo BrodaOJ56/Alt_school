@@ -44,7 +44,7 @@ git checkout -b YourBranchName
 `
 
 
-5 Open the folder in your code editor, while in your code editor, activate the virtual environment and install all dependencies (requirements txt file)
+5. Open the folder in your code editor, while in your code editor, activate the virtual environment and install all dependencies (requirements txt file)
 
 `
 cd .venv
