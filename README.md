@@ -32,10 +32,15 @@ git checkout -b YourBranchName
 5. Open the folder in your code editor.
 
 6. While in your code editor, activate the virtual environment and install all dependencies (requirements txt file)
-
+<br>
 cd .venv
+<br/>
+<br>
 cd scripts
+<br/>
+<br>
 .//activate
+<br/>
 
 Once the virtual environment is activated, install requirements txt file.
 
