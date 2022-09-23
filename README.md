@@ -64,7 +64,10 @@ Once the virtual environment is activated, install requirements txt file.
 `
 pip install requirements.txt
 `
+
 Run the app on your localhost;
+
+
 
 `python app.py
 `
