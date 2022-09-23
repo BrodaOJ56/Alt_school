@@ -19,9 +19,11 @@ cd AlSchoolClone
 
 2. While in the newly created folder, folk and git clone the repo into the folder.
 
+<br>
 git clone https://github.com/YourGitHubUsername/Alt_school_note
+<br/>
 
-cd  into the cloned folder
+cd  into the cloned folder;
 
 <br>
 cd Alt_school_note 
@@ -38,9 +40,7 @@ git remote add upstream https://github.com/BrodaOJ56/Alt_school_note
 git checkout -b YourBranchName
 <br/>
 
-5. Open the folder in your code editor.
-
-6. While in your code editor, activate the virtual environment and install all dependencies (requirements txt file)
+5 Open the folder in your code editor, while in your code editor, activate the virtual environment and install all dependencies (requirements txt file)
 
 <br>
 cd .venv
@@ -53,6 +53,7 @@ cd scripts
 <br>
 .//activate
 <br/>
+
 
 Once the virtual environment is activated, install requirements txt file.
 
@@ -69,6 +70,7 @@ Make changes and stage your changes by adding them:
 git add . or git add file.name
 <br/>
 
+
 Then commit the staged changes:
 
 <br>
@@ -84,7 +86,9 @@ git push origin YourBranchName
 
 This is when you'll usually create a pull request on GitHub.
 
+
 To fetch the latest, do 
+
 <br>
 git pull upstream main
 <br/>
