@@ -28,17 +28,21 @@ cd  into the cloned folder;
 <br>
 cd Alt_school_note 
 <br>
+
 3. Add an upstream, which links to the original GitHub repo;
 
 <br>
 git remote add upstream https://github.com/BrodaOJ56/Alt_school_note
 <br>
 
+
 4. Create and move into a new branch (preferably using your name or GitHub username for this repo):
+
 
 <br>
 git checkout -b YourBranchName
 <br>
+
 
 5 Open the folder in your code editor, while in your code editor, activate the virtual environment and install all dependencies (requirements txt file)
 
@@ -62,7 +66,7 @@ pip install requirements.txt
 <br>
 
 
-When you're done for the session:
+6. When you're done for the session:
 
 Make changes and stage your changes by adding them:
 
