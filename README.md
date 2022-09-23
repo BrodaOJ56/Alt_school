@@ -7,8 +7,9 @@ Steps to cloning this repo:
 1. Create a new folder on your local machine and cd into the folder.
 
 For example; 
-
+<br>
 mkdir AltSchoolClone
+<br/>
 
 cd AlSchoolClone
 
