@@ -25,9 +25,9 @@ git clone https://github.com/YourGitHubUsername/Alt_school_note
 
 cd  into the cloned folder;
 
-<br>
+'''
 cd Alt_school_note 
-<br>
+'''
 
 3. Add an upstream, which links to the original GitHub repo;
 
