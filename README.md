@@ -71,7 +71,11 @@ pip install requirements.txt
 Make changes and stage your changes by adding them:
 
 `
-git add . or git add file.name
+git add .
+`
+ or 
+`
+git add file.name
 `
 
 
