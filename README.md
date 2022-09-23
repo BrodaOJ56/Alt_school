@@ -1,4 +1,4 @@
-# Alt_school_noteThis is my learning note at Alt School Africa.
+# This is my learning note at Alt School Africa.
 
 NB: I use windows OS
 
