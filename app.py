@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
+from flask_migrate import Migrate
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -10,6 +11,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(base_dir, 'u
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False 
 
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 class User(db.Model):
     __tablename__="users"
@@ -53,7 +55,7 @@ def create_user():
     db.session.commit()
     
     return redirect(url_for('index'))
-
+    
 
 if __name__ == "__main__":
     db.create_all()
