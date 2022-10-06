@@ -9,7 +9,6 @@ app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(base_dir, 'users.db')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False 
-port = int(os.environ.get('PORT', 5000))
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
@@ -92,7 +91,7 @@ def delete_user(id):
     return redirect(url_for('index'))
 
     
-    
+port = int(os.environ.get('PORT', 5000)) 
 
 if __name__ == "__main__":
     db.create_all()
