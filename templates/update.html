@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Database Demo</title>
+    <title>Update Database</title>
     <style>
       * {
         box-sizing: border-box;
@@ -13,19 +13,18 @@
         margin: 0;
         text-align: left;
         background-color: #5b091c;
-        color:#fff ;
+        color: #fff;
         font-size: 20px;
       }
       .container {
         width: 50%;
         margin: auto;
-
       }
 
       .containerheader {
         text-align: center;
-        border: none;
-      }
+        border: none; }
+
       .container input {
           width: 100%;
           padding: 12px 20px;
@@ -36,30 +35,13 @@
           box-sizing: border-box;
       }
       .container select {
-        width: 100%;
+          width: 100%;
           padding: 12px 20px;
           margin: 8px 0;
           display: inline-block;
-          border: 1px solid #670be0;
+          border: 1px solid #4CAF50;
           border-radius: 4px;
           box-sizing: border-box;
-      }
-      .table_wrapper {
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-        white-space: nowrap;
-      }
-      th {
-        width: 200px;
-        background-color: #4CAF50;
-        color: floralwhite;
-        padding: 10px;
-        border: 1px dotted rgb(13, 99, 6);
-      }
-      td {
-        padding: 8px;
-        border: 1px dotted rgb(145, 4, 4);
       }
       button {
         background-color: #210af1;
@@ -68,7 +50,7 @@
         cursor: pointer;
       }
       button:hover {
-        background-color:#45a049;
+        background-color: #45a049;
         transition: 0.3s;
       }
       @media (max-width: 840px) {
@@ -80,63 +62,45 @@
     </style>
   </head>
   <body>
+    
     <div class="containerheader">
-    <h1>Alt School Database Project Demo</h1>
-    <br />
-    <br />
-    </div>
+
+    <h1>Update</h1>
+   </div>
+
     <div class="container">
-      <form action="{{url_for('create_user')}}" method="POST">
+      <form action="/update/{{user.id}}/" method="post">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username", placeholder="Enter your username.." required />
+        <input
+          type="text"
+          name="username"
+          id="username"
+          value="{{user.username}}"
+        />
         <br />
         <br />
         <label for="email">Email</label>
-        <input type="text" name="email" id="email", placeholder="Enter your email.." required />
+        <input type="text" name="email" id="email" value="{{user.email}}" />
         <br />
         <br />
         <label for="age">Age</label>
-        <input type="number" name="age" id="age", placeholder="Enter your age.." required />
+        <input type="number" name="age" id="age" value="{{user.age}}" />
         <br />
         <br />
         <label for="gender">Gender</label>
-        <select name="gender" id="gender" , required>
+        <select name="gender" id="gender">
+          <option value="{{user.gender}}" selected>{{user.gender}}</option>
           <option value="Female">Female</option>
           <option value="Male">Male</option>
-          <option value="Not Said" selected>Rather Not Say</option>
+          <option value="Not Said">Rather Not Say</option>
         </select>
         <br />
         <br />
         <div class="containerheader">
-        <button type="submit">submit</button>
+    
+        <button type="submit">Update</button>
         </div>
-
       </form>
-
-      <br />
-      <div class="table_wrapper">
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Action</th>
-          </thead>
-          <tbody>
-            {% for user in users %}
-            <tr>
-              <td>{{user.username}}</td>
-              <td>{{user.email}}</td>
-              <td>{{user.age}}</td>
-              <td>{{user.gender}}</td>
-              <td><a href="/update/{{user.id}}">Update</a> 
-                  <a href="/delete/{{user.id}}">Delete</a></td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
     </div>
   </body>
 </html>

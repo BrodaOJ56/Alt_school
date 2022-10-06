@@ -55,6 +55,42 @@ def create_user():
     db.session.commit()
     
     return redirect(url_for('index'))
+
+# Implemeting update functionality
+@app.route('/update/<int:id>/', methods=['GET', 'POST'])
+def update(id):
+    user_to_update = User.query.get_or_404(id)
+
+    if request.method == 'POST':
+        user_to_update.username = request.form.get('username')
+        user_to_update.email = request.form.get('email')
+        user_to_update.age = request.form.get('age')
+        user_to_update.gender = request.form.get('gender')
+
+
+        db.session.commit()
+
+        return redirect(url_for('index'))
+    
+    context = {
+        'user': user_to_update
+    }
+
+    return render_template('update.html', **context)
+
+
+
+# Implementing delete functionality
+@app.route('/delete/<int:id>/', methods=['GET'])
+def delete_user(id):
+    user_to_delete = User.query.get_or_404(id)
+
+    db.session.delete(user_to_delete)
+    db.session.commit()
+
+    return redirect(url_for('index'))
+
+    
     
 
 if __name__ == "__main__":
